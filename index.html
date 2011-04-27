@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title></title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/grid.css">
+
+	<script src="js/libs/modernizr-1.7.min.js"></script>
+
+</head>
+<body>
+	<div id="container" class="container_2">
+		<header>
+
+		</header>
+
+		<div id="widgetboxes" role="main">
+			<ul id="widgetboxes">
+				<li class="ui-state-default grid_1">Hi! I'm the weather!</li>
+				<li class="ui-state-default grid_1">Bus schedule over here!</li>
+				<li class="ui-state-default grid_1">This is a simple clock</li>
+				<li class="ui-state-default grid_1">What day is it?</li>
+				<li class="ui-state-default grid_1">Random Flickr image!</li>
+				<li class="ui-state-default grid_1">What music is playing?</li>
+				<li class="ui-state-default grid_1">Chuck Norris quotes!</li>
+				<li class="ui-state-default grid_1">Twitter top hits</li>
+			</ul>		
+		</div>
+
+		<footer>
+
+		</footer>
+	</div>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+	<script>!window.jQuery && document.write(unescape('%3Cscript src="js/libs/jquery-1.5.1.min.js"%3E%3C/script%3E'))</script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js"></script>
+	<script>!window.jQuery && document.write(unescape('%3Cscript src="js/libs/jqueryui.min.js"%3E%3C/script%3E'))</script>
+	<script src="js/plugins.js"></script>
+	<script src="js/script.js"></script>
+    <script>
+	    $(function() {
+    	    $("#widgetboxes").sortable();
+        	$("#widgetboxes").disableSelection();
+	    });
+    </script>	
+</body>
+</html>
