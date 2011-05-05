@@ -49,6 +49,16 @@ table {
 
 /* End CSS Reset */
 
+/*Alignment*/
+
+.alignleft {
+	text-align: left;
+}
+
+.alignright{
+	text-align: right;
+}
+
 #container {
 	margin-left: auto;
 	margin-right: auto;

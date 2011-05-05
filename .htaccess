@@ -1,0 +1,3 @@
+# Allow PHP in HTML files
+AddType application/x-httpd-php .html .htm
+AddHandler application/x-httpd-php .html .htm

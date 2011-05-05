@@ -1,0 +1,130 @@
+/*Calendar Widget*/
+li#calendar_widget {
+	background-color: white;
+}
+
+#calendar_widget li {
+	border-radius: 6px;
+	box-shadow: 1 1 #cdcdcd;
+}
+
+p#calendar_widget_day {
+	font-size: 1.6em;
+	color: white;
+	background-color: red;
+	padding: 10px;
+}
+
+
+p#calendar_widget_date {
+	font-size: 5em;
+	background-color: white;
+	padding-top: 30px;
+}
+
+/*jQuery Weather Widget*/
+#weather {
+	background: #6f9dbe;
+	background: -webkit-gradient(linear, left top, left bottom, from(#adc7db), to(#6f9dbe));
+	background: -moz-linear-gradient(top, #b2bcc8, #adc7db);
+	width: 500px;
+	height: 450px;
+	overflow: hidden;
+}
+
+#weather h2 {
+	color: #000;
+	text-shadow: rgba(250, 250, 250, 0.6) 2px 2px 0;
+	padding: 10px 20px;
+}
+
+#weather p {
+	font-size: .5em;
+	padding: 0px 20px;	
+}
+
+#weather p span {
+	font-size: 16px;
+}
+
+#weather a:link, #weather a:active, #weather a:visited {
+	display: block;
+	clear: both;
+	text-decoration: none;
+	color: #222;
+	font-size: 12px;
+}
+
+#weather a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+
+/*Random Content Generator Widget*/
+#randomContent_widget{
+	width: 500px;
+	height: 450px;
+	background: #FEE05E url('randomContent/chucknorris_bg.jpg') bottom right no-repeat;
+}
+
+p#randomContent_text {
+	font-size: .5em;
+	padding: 10px;
+	text-align: left;
+}
+
+/*Twitter Widget*/
+#twitter_widget {
+	background: #94D8ED;
+	height: 450px;
+	overflow: hidden;
+}
+
+#widgetboxes li .tweet_list li {
+	background: #94D8ED;
+	height: auto;
+	font-size: 26px;
+	text-align: left;
+	margin: 0;
+	padding: 10px;
+}
+
+#widgetboxes li .tweet_list li img {
+	position: relative;
+	float: left;
+	padding: 0 10px;
+}
+
+/*Clock Widget*/
+#clock {
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	width: 450px;
+	height: 450px;
+	background: transparent url(clock/images/clockface.png);
+	list-style: none;
+}
+
+#sec, #min, #hour {
+	position: absolute;
+	width: 24px;
+	height: 450px;
+	top: 0px;
+	left: 210px;
+}
+
+#sec {
+	background: transparent url(clock/images/sechand.png) !important;
+	z-index: 3;
+}   
+
+#min {
+	background: transparent url(clock/images/minhand.png) !important;
+	z-index: 2;
+}   
+
+#hour {
+	background: transparent url(clock/images/hourhand.png) !important;
+	z-index: 1;
+}
