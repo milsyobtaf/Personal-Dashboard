@@ -41,16 +41,28 @@
 				    	$("#weather").append("<p class='alignleft'>"+weather.high+"&deg; "+weather.units.temp+" / "+weather.low+"&deg; "+weather.units.temp+"</p>");
 				    	$("#weather").append('<p><img src="'+weather.image+'"></p>');
 				    	$("#weather").append("<p class='alignright'><strong>Sunrise</strong>: "+weather.sunrise+"</p>");
-				    	$("#weather").append("<p class='alignright'><strong>Sunset</strong>: "+weather.sunset+"</p>");				    	
+				    	$("#weather").append("<p class='alignright'><strong>Sunset</strong>: "+weather.sunset+"</p>");
+				    	$("#weather").append("<div id='weather_spacing'></div>");
 				    },
 				    error: function(error) {
 				    	$("#weather").html("<p>"+error+"</p>");
 				    }
 				});
 				</script>
-				<div id="weather"></div>
+				<div id="weather">
+				</div>
 				</li>
-				<li class="ui-state-default grid_1">Bus schedule over here!</li>
+				<li class="ui-state-default grid_1">
+				<div id="transit_widget">
+				<script type="text/javascript" src="widgets/transit/countdown/jquery.countdown.min.js"></script>
+				<script type="text/javascript">
+				$('#transit_countdown').countdown({
+					until: +30
+					});
+				</script>
+					<div id="transit_countdown"></div>
+				</div>
+				</li>
 				<li class="ui-state-default grid_1">
 				<script type="text/javascript">
 				    $(document).ready(function() {
@@ -88,21 +100,50 @@
 					</ul>
 				</li>
 				<li id="calendar_widget" class="ui-state-default grid_1">
-					<p id="calendar_widget_day">
-							<?php
-								echo date('l');
-							?>
-					</p>
-					<p id="calendar_widget_date">
-							<?php
-								echo date('j');
-							?>
-					</p>
+					<div id="calendar_widget_container">
+						<p id="calendar_widget_day">
+								<?php
+									echo date('l');
+								?>
+						</p>
+						<p id="calendar_widget_date">
+								<?php
+									echo date('j');
+								?>
+						</p>
+					</div>
 				</li>
 				<li class="ui-state-default grid_1">
-<script type="text/javascript" src="http://cdn.widgetserver.com/syndication/subscriber/InsertWidget.js"></script><script type="text/javascript">if (WIDGETBOX) WIDGETBOX.renderWidget('49178ee5-f161-48c0-b8ee-535d1e5848b2');</script>
+				<script type="text/javascript" src="widgets/flickr/jflickrfeed/cycle/jquery.cycle.lite.min.js"></script>
+				<script type="text/javascript" src="widgets/flickr/jflickrfeed/jflickrfeed.min.js"></script>
+				<script type="text/javascript">
+				$(document).ready(function() {
+				$('#flickrcycle').jflickrfeed({
+					limit: 20,
+					qstrings: {
+						id: '68128273@N00'
+					},
+					itemTemplate: '<li><img src="{{image}}" alt="" /></li>'
+				}, function(data) {
+					$('#flickrcycle div').hide();
+					$('#flickrcycle').cycle({
+						timeout: 10000
+					});
+					$('#flickrcycle li').hover(function(){
+						$(this).children('div').show();
+					},function(){
+						$(this).children('div').hide();
+					});
+				});
+				});
+				</script>
+				<div id="flickrcycle"></div>
 				</li>
-				<li class="ui-state-default grid_1">What music is playing?</li>
+				<li class="ui-state-default grid_1">
+					<div id="nowplaying">
+					<div id="hypem-widget"></div><script type="text/javascript" src="http://hypem.com/widget/v2/popular/now/10/hype.js?bcol=FEF2EB&tcol=111111&lcol=F26A21"></script>
+					</div>
+				</li>
 				<li class="ui-state-default grid_1">
 			    <script type="text/javascript" src="widgets/randomContent/js/jquery.randomContent.js"></script>
 			    <script type="text/javascript">

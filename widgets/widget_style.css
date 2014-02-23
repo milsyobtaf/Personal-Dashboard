@@ -1,11 +1,9 @@
 /*Calendar Widget*/
-li#calendar_widget {
-	background-color: white;
-}
-
-#calendar_widget li {
-	border-radius: 6px;
-	box-shadow: 1 1 #cdcdcd;
+#calendar_widget_container {
+	-webkit-box-shadow: 5px 5px 5px #cdcdcd;
+	-moz-box-shadow: 5px 5px 5px #cdcdcd;
+	box-shadow: 5px 5px 5px #cdcdcd;
+	border-radius: 10px;
 }
 
 p#calendar_widget_day {
@@ -19,7 +17,10 @@ p#calendar_widget_day {
 p#calendar_widget_date {
 	font-size: 5em;
 	background-color: white;
-	padding-top: 30px;
+	padding-top: 10px;
+	-webkit-box-shadow: 5px 5px 5px #cdcdcd;
+	-moz-box-shadow: 5px 5px 5px #cdcdcd;
+	box-shadow: 5px 5px 5px #cdcdcd;
 }
 
 /*jQuery Weather Widget*/
@@ -58,6 +59,10 @@ p#calendar_widget_date {
 #weather a:hover {
 	color: #000;
 	text-decoration: underline;
+}
+
+#weather_spacing {
+	padding-bottom: 50px;
 }
 
 /*Random Content Generator Widget*/
@@ -127,4 +132,68 @@ p#randomContent_text {
 #hour {
 	background: transparent url(clock/images/hourhand.png) !important;
 	z-index: 1;
+}
+
+/*Flickr Widget*/
+#flickrcycle {
+	margin: 0;
+	padding: 0;
+	width: 500px;
+	height: 450px;
+	background: transparent;
+}
+
+#flickrcycle li {
+	position: relative;
+	list-style: none;
+	margin: 0;
+	width: 500px;
+	height: 450px;
+	overflow: hidden;
+}
+
+#flickrcycle li div {
+	position: absolute;
+	width: 500px;
+	background: black;
+	color: white;
+	font-size: 12px;
+	opacity: .8;
+}
+
+/*Transit Widget*/
+#transit_widget {
+	background: #305080 url('../widgets/transit/images/capmetro.png') bottom center no-repeat;
+	height: inherit;
+}
+
+#glowingLayout span {
+	display: block;
+	float: left;
+	width: 34px;
+	height: 50px;
+    background: url(transit/images/countdownGlowing.gif) no-repeat 0px 0px;
+}
+
+#glowingLayout span.image0 { background-position: -0px 0px; } 
+#glowingLayout span.image1 { background-position: -34px 0px; } 
+#glowingLayout span.image2 { background-position: -68px 0px; } 
+#glowingLayout span.image3 { background-position: -102px 0px; } 
+#glowingLayout span.image4 { background-position: -136px 0px; } 
+#glowingLayout span.image5 { background-position: -170px 0px; } 
+#glowingLayout span.image6 { background-position: -204px 0px; } 
+#glowingLayout span.image7 { background-position: -238px 0px; } 
+#glowingLayout span.image8 { background-position: -272px 0px; } 
+#glowingLayout span.image9 { background-position: -306px 0px; } 
+#glowingLayout span.imageDay { background-position: -340px 0px; } 
+#glowingLayout span.imageSep { background-position: -374px 0px; } 
+#glowingLayout span.imageSpace { background-position: -408px 0px; }
+
+/*Now Playing Widget*/
+#hypem-widget {
+	z-index: 100;
+}
+
+.hypem-small {
+	width: 500px !important;
 }
